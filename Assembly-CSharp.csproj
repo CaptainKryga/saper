@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Game\GameCell.cs" />
     <Compile Include="Assets\Scripts\Game\GameController.cs" />
+    <Compile Include="Assets\Scripts\Game\GameFlag.cs" />
     <Compile Include="Assets\Scripts\Game\GameStart.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

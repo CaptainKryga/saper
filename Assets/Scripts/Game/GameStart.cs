@@ -9,25 +9,29 @@ public class GameStart : MonoBehaviour
     public GameObject cell;
     public Sprite mine;
     public Sprite floor;
+    public Sprite green;
     public Sprite flag;
 
     public int mines = 5;
 
-    private GameObject[,] map = new GameObject[5,5];
+    public GameObject[,] map = new GameObject[5,5];
     // Start is called before the first frame update
     void Start()
     {
-        int x, y;
+        int x, y, bomb;
         for (y = 0; y < 5; y++)
         {
             for (x = 0; x < 5; x++)
             {
                 map[y, x] = Instantiate(cell);
                 map[y, x].transform.position = new Vector2(x * 1.5f, y * -1.5f);
+                map[y, x].GetComponent<GameCell>().x = x;
+                map[y, x].GetComponent<GameCell>().y = y;
             }
         }
 
-        while (mines >= 0)
+        bomb = mines;
+        while (bomb > 0)
         {
             x = Random.Range(0, 5);
             y = Random.Range(0, 5);
@@ -36,7 +40,7 @@ public class GameStart : MonoBehaviour
                 map[y, x].GetComponent<SpriteRenderer>().sprite = mine;
                 map[y, x].GetComponent<GameCell>().mine = true;
                 map[y, x].transform.Find("number").gameObject.SetActive(false);
-                mines--;
+                bomb--;
             }
         }
 
@@ -70,10 +74,4 @@ public class GameStart : MonoBehaviour
         return (mine);
     }
     
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

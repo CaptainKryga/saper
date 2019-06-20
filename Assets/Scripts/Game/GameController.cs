@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            text.text = "Game Over\nYour score: " + score;
+            //text.text = "Game Over\nYour score: " + score;
             gameOver.SetActive(true);
             pause.SetActive(false);
         }
