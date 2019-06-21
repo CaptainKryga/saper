@@ -726,6 +726,7 @@ MonoBehaviour:
   cell: {fileID: 4275329149961534019, guid: 93f75e951ca124b578bc659566d50417, type: 3}
   mine: {fileID: 21300000, guid: 612081cd66189490a8c4592678cf3de6, type: 3}
   floor: {fileID: 21300000, guid: eb5119d7fbfd449ec932dee727c324c5, type: 3}
+  green: {fileID: 21300000, guid: c8078f45874044ada971488f2e4ba225, type: 3}
   flag: {fileID: 21300000, guid: b1f1d1ec27fb14135a6b88e704555ab2, type: 3}
   mines: 5
 --- !u!114 &1069594283
